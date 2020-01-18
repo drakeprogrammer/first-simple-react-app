@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import "./App.css"
 import Countdown from "./Countdown";
+import EditEnv from "./EditEvent";
 
 class App extends Component {
     constructor() {
@@ -21,6 +22,7 @@ class App extends Component {
         return (
             <div className="app">
                 {events}
+                <EditEnv />
             </div>
         )
     }
