@@ -1,6 +1,7 @@
 import React from "react";
+// import PropTypes from "prop-types";
 
-const EditEnv = () => {
+const EditEnv = props => {
     return (
         <div className="edit-event">
             <div className="edit-event__input-group">
@@ -16,7 +17,7 @@ const EditEnv = () => {
                 <label htmlFor="minute">minute</label>
                 <input id="minute" type="tel" name="minute" />
             </div>
-            <button>OK</button>
+            <button onClick={() => props.onSave()}>OK</button>
             <button>Cancel</button>
         </div>
     )
