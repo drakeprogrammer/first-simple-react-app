@@ -8,14 +8,14 @@ class App extends Component {
             events: [
                 {id:0, name: "śniadanie", time: "7:00"},
                 {id:1, name: "obiad", time: "15:00"},
-                {id:1, name: "kolacja", time: "19:00"}
+                {id:2, name: "kolacja", time: "19:00"}
             ]
         }
     }
 
     render() {
         const events = this.state.events.map(el => {
-            return <Countdown name={el.name} time={el.time}/>;
+            return <Countdown key={el.id} name={el.name} time={el.time}/>;
         });
         return (
             <div>
