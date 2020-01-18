@@ -6,16 +6,22 @@ const EditEnv = props => {
         <div className="edit-event">
             <div className="edit-event__input-group">
                 <label htmlFor="name">name</label>
-                <input id="name" type="text" name="name" />
+                <input id="name"
+                       type="text"
+                       name="name"
+                       onChange={(e) => console.log(e.target.name, e.target.value)}/>
             </div>
-
             <div className="edit-event__input-group">
                 <label htmlFor="hour">hour</label>
-                <input id="hour" type="tel" name="hour" />
+                <input id="hour" type="tel" name="hour"
+                       onChange={(e) => console.log(e.target.name, e.target.value)}
+                />
             </div>
             <div className="edit-event__input-group">
                 <label htmlFor="minute">minute</label>
-                <input id="minute" type="tel" name="minute" />
+                <input id="minute" type="tel" name="minute"
+                       onChange={(e) => console.log(e.target.name, e.target.value)}
+                />
             </div>
             <button onClick={() => props.onSave()}>OK</button>
             <button>Cancel</button>
